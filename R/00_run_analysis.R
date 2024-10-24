@@ -52,6 +52,9 @@ run_analysis <- function(file_path, col_to_keep, annotation = c("monaco", "bluep
   # Clean up metadata
   object@meta.data$General_CellType <- object@meta.data$sub_bucket
   object@meta.data$Specific_CellType <- object@meta.data$final_analysis
+  object@meta.data$Disease_Treatment <- paste(object@meta.data$Disease, 
+                                                object@meta.data$Treatment, sep = '_')
+
   
   # Subset metadata to keep specified columns
   object@meta.data <- object@meta.data[, col_to_keep, drop = FALSE]
