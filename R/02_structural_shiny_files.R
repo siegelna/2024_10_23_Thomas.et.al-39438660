@@ -25,4 +25,4 @@ scConf4 = createConfig(seu)
 makeShinyFiles(seu, scConf4, gene.mapping = TRUE, shiny.prefix = "sc4", shiny.dir = "IBD_biopsy_scRNAseqzenodoID13965420_structural/", gex.assay = "RNA")
 
 ## Make files
-makeShinyCodesMulti( shiny.title = "IBD Tissue Biopsies scRNAseq (13965420), Structural Cells", shiny.footnotes = NULL, shiny.prefix = c("sc1", "sc2", "sc3", "sc4"), shiny.headers = c("Endothelium", "Epithelium (Ileal)", "epithelium (Colonic)", "fibroblast and Pericyte"),  shiny.dir = "IBD_biopsy_scRNAseqzenodoID13965420_structural/") 
+makeShinyCodesMulti( shiny.title = "IBD Tissue Biopsies scRNAseq (13965420), Structural Cells", shiny.footnotes = NULL, shiny.prefix = c("sc1", "sc2", "sc3", "sc4"), shiny.headers = c("Endothelium", "Epithelium (Ileal)", "Epithelium (Colonic)", "fibroblast and Pericyte"),  shiny.dir = "IBD_biopsy_scRNAseqzenodoID13965420_structural/") 

@@ -1476,7 +1476,7 @@ tabPanel(
   )      # End of tab (2 space) 
    ), 
 
-navbarMenu("epithelium (Colonic)",### Tab1.a1: cellInfo vs geneExpr on dimRed 
+navbarMenu("Epithelium (Colonic)",### Tab1.a1: cellInfo vs geneExpr on dimRed 
   tabPanel( 
     HTML("CellInfo vs GeneExpr"), 
     h4("Cell information vs gene expression on reduced dimensions"), 
