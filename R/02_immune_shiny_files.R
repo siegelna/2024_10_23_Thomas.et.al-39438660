@@ -1,4 +1,8 @@
 # Immune
+suppressPackageStartupMessages({
+    library(Seurat)
+    library(ShinyCell)
+})
 
 ## bcell
 seu =  get(load(file = "data/bcell_viz_ready_revised.rda"))
@@ -33,4 +37,4 @@ makeShinyFiles(seu, scConf6, gene.mapping = TRUE, shiny.prefix = "sc6", shiny.di
 
 
 ## Make files
-makeShinyCodesMulti( shiny.title = "IDB Tissue Biopsies scRNAseq (13965420), Immune Cells", shiny.footnotes = NULL, shiny.prefix = c("sc1", "sc2", "sc3", "sc4", "sc5", "sc6"), shiny.headers = c("B cell", "CD4 T cell", "CD8 T cell", "ILC", "Myeloid", "Plasma cell"),  shiny.dir = "IBD_biopsy_scRNAseqzenodoID13965420_immune/") 
+makeShinyCodesMulti( shiny.title = "IBD Tissue Biopsies scRNAseq (13965420), Immune Cells", shiny.footnotes = NULL, shiny.prefix = c("sc1", "sc2", "sc3", "sc4", "sc5", "sc6"), shiny.headers = c("B cell", "CD4 T cell", "CD8 T cell", "ILC", "Myeloid", "Plasma cell"),  shiny.dir = "IBD_biopsy_scRNAseqzenodoID13965420_immune/") 
