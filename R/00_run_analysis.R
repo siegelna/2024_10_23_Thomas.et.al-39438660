@@ -54,7 +54,11 @@ run_analysis <- function(file_path, col_to_keep, annotation = c("monaco", "bluep
   object@meta.data$Specific_CellType <- object@meta.data$final_analysis
   object@meta.data$Disease_Treatment <- paste(object@meta.data$Disease, 
                                                 object@meta.data$Treatment, sep = '_')
-
+  # Fix naming
+  seu@meta.data$Disease_Treatment <- gsub("Healthy_None", "Healthy", seu@meta.data$Disease_Treatment)
+  # Reorder `Disease_Treatment`
+  newlevels <- c('Healthy', 'UC_Pre', 'UC_Post', 'CD_Pre', 'CD_Post')
+  seu@meta.data$Disease_Treatment <- factor(seu@meta.data$Disease_Treatment, levels = newlevels)
   
   # Subset metadata to keep specified columns
   object@meta.data <- object@meta.data[, col_to_keep, drop = FALSE]
